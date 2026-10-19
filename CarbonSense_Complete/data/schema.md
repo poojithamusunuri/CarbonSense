@@ -1,0 +1,15 @@
+# Dataset schema
+- `timestamp`: ISO 8601 timestamp. Synthetic files use a reproducible illustrative timeline.
+- `device_id`: sensor node ID.
+- `load_label`: known class label (`led`, `fan`, `motor`, `unknown`).
+- `condition_label`: operating condition for that sample.
+- `run_id`: independent experimental run identifier; split train/test by run when possible.
+- `voltage_v`: measured/simulated load-path voltage in volts.
+- `current_ma`: current in milliamps.
+- `power_mw`: power in milliwatts; should be broadly consistent with voltage × current.
+- `energy_wh`: integrated energy in watt-hours.
+- `temperature_c`: optional measured/simulated component or ambient temperature.
+- `duty_cycle_pct`: control duty cycle, if applicable.
+- `anomaly_label`: `normal` or `review`; synthetic labels are only illustrative.
+- `data_origin`: `synthetic` or `hardware`. Never mark simulated values as hardware.
+- `notes`: experiment context.

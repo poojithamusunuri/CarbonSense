@@ -1,0 +1,15 @@
+# CarbonSense validation checklist
+- [ ] Confirm INA219 is detected at I²C address 0x40 (or actual board address).
+- [ ] Confirm OLED address (usually 0x3C) with I²C scan.
+- [ ] Validate voltage with known low-voltage DC supply and reference meter.
+- [ ] Validate current with safe known load and reference meter.
+- [ ] Verify power is consistent with voltage × current.
+- [ ] Validate energy integration against a timed reference.
+- [ ] Confirm backend health endpoint and real hardware POST.
+- [ ] Confirm dashboard updates when a new reading is inserted.
+- [ ] Verify CSV export contains timestamps and data_origin=hardware for genuine readings.
+- [ ] Collect 3–5 independent runs per load and condition.
+- [ ] Train/test by run_id; report class precision/recall/F1 and confusion matrix.
+- [ ] Evaluate unknown loads and conditions not seen during training.
+- [ ] Document sensor uncertainty and calibration.
+- [ ] Only then write conclusions about detection or reduction performance.

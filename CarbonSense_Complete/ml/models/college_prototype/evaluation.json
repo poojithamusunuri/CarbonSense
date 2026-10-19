@@ -1,0 +1,73 @@
+{
+  "data_file": "data/college_prototype/synthetic_readings.csv",
+  "data_origin_values": [
+    "simulated_development"
+  ],
+  "rows": 2520,
+  "runs": 72,
+  "classes": [
+    "dc_motor",
+    "fan",
+    "led"
+  ],
+  "split": "GroupShuffleSplit by run_id",
+  "accuracy": 0.973015873015873,
+  "classification_report": {
+    "dc_motor": {
+      "precision": 0.9781818181818182,
+      "recall": 0.9607142857142857,
+      "f1-score": 0.9693693693693693,
+      "support": 280.0
+    },
+    "fan": {
+      "precision": 0.9388888888888889,
+      "recall": 0.9657142857142857,
+      "f1-score": 0.952112676056338,
+      "support": 175.0
+    },
+    "led": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 175.0
+    },
+    "accuracy": 0.973015873015873,
+    "macro avg": {
+      "precision": 0.9723569023569024,
+      "recall": 0.9754761904761905,
+      "f1-score": 0.9738273484752358,
+      "support": 630.0
+    },
+    "weighted avg": {
+      "precision": 0.973327721661055,
+      "recall": 0.973015873015873,
+      "f1-score": 0.9730843519575912,
+      "support": 630.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      269,
+      11,
+      0
+    ],
+    [
+      6,
+      169,
+      0
+    ],
+    [
+      0,
+      0,
+      175
+    ]
+  ],
+  "anomaly_detection": {
+    "test_rows": 630,
+    "flagged_rows": 246,
+    "flagged_fraction": 0.3904761904761905,
+    "training_baseline": "rows labelled normal",
+    "interpretation": "Unusual relative to training distribution; not proof of waste or a fault."
+  },
+  "warning": "If data_origin is simulated, all metrics are software-development checks only, not hardware validation or proof of real-world accuracy."
+}

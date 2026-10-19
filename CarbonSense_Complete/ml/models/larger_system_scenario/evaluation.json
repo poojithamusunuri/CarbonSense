@@ -1,0 +1,89 @@
+{
+  "data_file": "data/real_world_scenario/synthetic_readings.csv",
+  "data_origin_values": [
+    "simulated_development"
+  ],
+  "rows": 3360,
+  "runs": 96,
+  "classes": [
+    "lighting_circuit",
+    "office_equipment",
+    "pump_motor",
+    "ventilation_fan"
+  ],
+  "split": "GroupShuffleSplit by run_id",
+  "accuracy": 0.9535714285714286,
+  "classification_report": {
+    "lighting_circuit": {
+      "precision": 0.9878048780487805,
+      "recall": 0.9918367346938776,
+      "f1-score": 0.9898167006109979,
+      "support": 245.0
+    },
+    "office_equipment": {
+      "precision": 0.9351851851851852,
+      "recall": 0.9619047619047619,
+      "f1-score": 0.9483568075117371,
+      "support": 210.0
+    },
+    "pump_motor": {
+      "precision": 0.9301075268817204,
+      "recall": 0.9885714285714285,
+      "f1-score": 0.9584487534626038,
+      "support": 175.0
+    },
+    "ventilation_fan": {
+      "precision": 0.953125,
+      "recall": 0.8714285714285714,
+      "f1-score": 0.9104477611940298,
+      "support": 210.0
+    },
+    "accuracy": 0.9535714285714286,
+    "macro avg": {
+      "precision": 0.9515556475289215,
+      "recall": 0.9534353741496598,
+      "f1-score": 0.9517675056948423,
+      "support": 840.0
+    },
+    "weighted avg": {
+      "precision": 0.953959703827549,
+      "recall": 0.9535714285714286,
+      "f1-score": 0.953074503492692,
+      "support": 840.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      243,
+      0,
+      0,
+      2
+    ],
+    [
+      2,
+      202,
+      1,
+      5
+    ],
+    [
+      0,
+      0,
+      173,
+      2
+    ],
+    [
+      1,
+      14,
+      12,
+      183
+    ]
+  ],
+  "anomaly_detection": {
+    "test_rows": 840,
+    "flagged_rows": 304,
+    "flagged_fraction": 0.3619047619047619,
+    "training_baseline": "rows labelled normal",
+    "interpretation": "Unusual relative to training distribution; not proof of waste or a fault."
+  },
+  "warning": "If data_origin is simulated, all metrics are software-development checks only, not hardware validation or proof of real-world accuracy."
+}

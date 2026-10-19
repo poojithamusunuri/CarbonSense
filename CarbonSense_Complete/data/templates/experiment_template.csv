@@ -1,0 +1,1 @@
+timestamp,device_id,load_label,condition_label,run_id,voltage_v,current_ma,power_mw,energy_wh,temperature_c,duty_cycle_pct,anomaly_label,data_origin,notes

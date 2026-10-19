@@ -1,0 +1,1 @@
+Serve with `python3 -m http.server 5173` and open http://127.0.0.1:5173. The dashboard polls the configured FastAPI base URL every five seconds. It displays no fake live metrics; when the API has no records, it explicitly shows an empty state. Use the API URL input to configure the backend address.
